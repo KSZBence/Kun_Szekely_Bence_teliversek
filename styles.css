@@ -1,0 +1,145 @@
+body{
+    background-image: url("GRID_TABLAZAT/kepek/hatter.jpg");
+}
+
+main{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: 
+    "h h h"
+    "n a as"
+    "f f f"
+    ;
+}
+
+header{
+    background-image: url("GRID_TABLAZAT/kepek/fejlec.jpg");
+    width: 100%;
+    grid-area: h;
+}
+header h1{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: white;
+    text-align: center  ;
+    
+}
+
+nav{
+    background-color: white;
+    grid-area: n;
+    
+}
+
+nav li{
+    list-style-type: none;
+    background-color: rgb(61, 110, 214);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 2px;
+}
+
+nav li:hover{
+    background-color: rgb(93, 144, 255);
+    
+}
+
+nav ul{
+    text-align: center;
+    color: white;
+    padding: 0;
+    width: 95%;
+    margin: auto;
+    padding-top: 1em;
+    padding-bottom: 10em;
+}
+
+article{
+    background-color: white;
+    grid-area: a;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid rgb(173, 170, 170);
+}
+
+thead{
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even){
+    background-color: lightblue;
+}
+
+tbody tr:nth-child(odd){
+    color: brown;
+}
+
+table a{
+    color: brown;
+}
+
+aside{
+    background-color: white;
+    grid-area: as;
+    border-left: 1px solid rgb(173, 170, 170);
+}
+
+#vers{
+    padding-left: 2em;
+    padding-top: 2em;
+}
+
+#vers h3{
+    margin-top: 0;
+}
+
+footer{
+    grid-area: f;
+    color: blue;
+    background-color: rgb(61, 110, 214);
+    padding: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px){
+    main{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+    "h h"
+    "n n" 
+    "a as" 
+    "f f"
+    ;
+    }
+
+    nav li{
+        display: inline;
+        
+    }
+}
+
+
+@media screen and (max-width: 700px){
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+    "h"
+    "n" 
+    "a" 
+    "as"
+    "f"
+    ;
+    }
+    nav li{
+        display: block;
+    }
+}
+
